@@ -1,23 +1,24 @@
 # LangGraph Learning
 
-A beginner-friendly repository for learning **LangGraph** by building graph-based AI workflows using Python. This project demonstrates the core concepts of LangGraph, including state management, nodes, graph execution, and workflow visualization.
+A hands-on repository documenting my journey of learning **LangGraph** by building graph-based AI workflows in Python. This project starts with the fundamentals of `StateGraph` and gradually progresses toward advanced concepts such as conditional routing, memory, tool calling, and AI agents.
 
 ## 🚀 Features
 
 * Build workflows using `StateGraph`
-* Define and manage application state with `TypedDict`
-* Create and connect graph nodes
-* Set entry and finish points
-* Compile and execute LangGraph applications
-* Visualize workflow graphs using Mermaid diagrams
+* Manage application state with `TypedDict`
+* Create and connect multiple graph nodes
+* Define entry and finish points
+* Execute sequential workflows
+* Visualize graphs using Mermaid diagrams
+* Generate graph images (`graph.png`)
 
 ## 📂 Project Structure
 
 ```text
 langgraph/
-│── simple_graph.py      # Basic LangGraph example
-│── graph.png            # Generated workflow graph
-└── README.md
+│── simple_graph.py      # Basic LangGraph examples
+│── graph.png            # Generated graph visualization
+│── README.md
 ```
 
 ## 🛠️ Technologies Used
@@ -25,7 +26,7 @@ langgraph/
 * Python 3.x
 * LangGraph
 * IPython
-* Mermaid (for graph visualization)
+* Mermaid (Graph Visualization)
 
 ## 📦 Installation
 
@@ -36,7 +37,7 @@ git clone https://github.com/akhilsofine/langgraph.git
 cd langgraph
 ```
 
-Create and activate a virtual environment:
+Create a virtual environment:
 
 ### Windows
 
@@ -52,43 +53,82 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-Install the required packages:
+Install dependencies:
 
 ```bash
 pip install langgraph ipython
 ```
 
-## ▶️ Run the Project
+## ▶️ Running the Project
+
+Run the example:
 
 ```bash
 python simple_graph.py
 ```
 
-If you're running the script from the terminal, save the generated graph as `graph.png` to view it. In Jupyter Notebook, the graph can be displayed directly.
+The program will:
 
-## 📚 Concepts Covered
+* Execute the LangGraph workflow
+* Generate a Mermaid graph visualization
+* Save the visualization as `graph.png`
+
+## 📖 Concepts Covered
+
+### ✅ Single-Node StateGraph
+
+```text
+START
+  │
+  ▼
+hello_world
+  │
+  ▼
+END
+```
+
+### ✅ Multi-Node Sequential StateGraph
+
+```text
+START
+  │
+  ▼
+greeter
+  │
+  ▼
+greeting_with_age
+  │
+  ▼
+END
+```
+
+## 📚 LangGraph Concepts Learned
 
 * StateGraph
 * TypedDict
-* Nodes
 * State Management
+* Nodes
+* Edges
+* Sequential Workflows
 * Entry Point
 * Finish Point
 * Graph Compilation
 * Graph Execution
 * Mermaid Graph Visualization
 
-## 🎯 Learning Goal
+## 🎯 Learning Roadmap
 
-This repository is part of my journey to learn LangGraph and build graph-based AI applications. Future updates will include:
+Planned additions to this repository include:
 
-* Multiple connected nodes
-* Conditional edges
-* Tool calling
-* Agent workflows
-* Memory integration
-* Retrieval-Augmented Generation (RAG)
-* Multi-agent systems
+* Conditional Edges
+* Branching Workflows
+* Loops
+* Tool Calling
+* Memory
+* ReAct Agents
+* AI Agent Workflows
+* Multi-Agent Systems
+* Retrieval-Augmented Generation (RAG) with LangGraph
 
 ## 🤝 Contributing
 
